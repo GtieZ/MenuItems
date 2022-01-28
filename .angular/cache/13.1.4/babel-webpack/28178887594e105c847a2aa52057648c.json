@@ -1,0 +1,1 @@
+{"ast":null,"code":"const Global = {\n  url: \"https://davids-restaurant.herokuapp.com/\"\n};\nexport default Global;","map":null,"metadata":{},"sourceType":"module"}

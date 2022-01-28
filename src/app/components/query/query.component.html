@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div *ngIf="menuItems.length==0" class="text-center text-danger">Item not found!</div>
+
+    <div *ngFor="let item of menuItems">
+        <div class="card mx-2 my-2  border-danger category" style="width: 18rem;">
+
+            <div class="card-body">
+                <h5 class="card-title text-danger">{{item.name}}</h5>
+                <p class="card-text">{{item.description}}</p>
+            </div>
+
+            <div class="card-footer">
+                <span *ngIf="item.small_portion_name">
+                    <strong>{{item.small_portion_name | uppercase}}: </strong>
+                </span>
+                <span class="me-4" *ngIf="item.price_small">
+                    ${{item.price_small}}
+                </span>
+
+                <span *ngIf="item.large_portion_name">
+                    <strong>{{item.large_portion_name | uppercase}}: </strong>
+                </span>
+                <span *ngIf="item.price_large">
+                    ${{item.price_large}}
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+</div>

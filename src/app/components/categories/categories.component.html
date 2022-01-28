@@ -1,0 +1,14 @@
+<div class="container">
+
+    <div *ngFor="let category of categories">
+        <div class="card my-3 mx-2 bg-light border-primary category">
+            <div class="card-body">
+                <h5 class="card-title text-danger text-center mb-2">
+                    <a [routerLink]="['/menu-items/', category.short_name]">{{category.name}}</a>
+                </h5>
+                <p class="card-text">{{category.special_instructions}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>

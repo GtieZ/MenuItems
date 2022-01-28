@@ -1,0 +1,33 @@
+<div class="container">
+
+    <h2>{{categoryName}}</h2>
+    <hr>
+
+    <div *ngFor="let menuItem of menuItems">
+
+        <div class="card border-success mx-3 my-2 category" style="width: 17rem;">
+            <div class="card-body">
+                <h5 class="card-title text-success">{{menuItem.name}}</h5>
+                <p class="card-text">{{menuItem.description}}</p> 
+            </div>
+            <div class="card-footer">
+                <span class="me-4">
+                    <strong *ngIf="menuItem.small_portion_name">{{menuItem.small_portion_name | uppercase}}:</strong> 
+                    <span *ngIf="menuItem.price_small"> ${{menuItem.price_small}}</span> 
+                </span>
+                <span>
+                    <strong *ngIf="menuItem.large_portion_name">{{menuItem.large_portion_name | uppercase}}:</strong>
+                    <span *ngIf="menuItem.price_large"> ${{menuItem.price_large}}</span>   
+                </span>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+</div>
